@@ -220,13 +220,18 @@
                 <a href="<%=pro.getProductFile()%>"><button class="btn btn-sm">download</button></a>
                 <br/>
                 <br/>
-                <%}%>
                 <h3 class="brick-color"> <%=pro.getProductName()%></h3>
                 <%if (pro.getProductDesc() != null) {%>
                 <P><%=pro.getProductDesc()%></P>
-
-                <%}
-                } else if (pro.getProductFiletype().equalsIgnoreCase("video")) {%>
+                    <%}
+                    } else {%>
+                <img class="img-responsive post-img center-block" width="400" height="320" src=<%=pro.getProductFile()%> alt=""/>
+                <h3 class="brick-color"> <%=pro.getProductName()%></h3>
+                <%if (pro.getProductDesc() != null) {%>
+                <P><%=pro.getProductDesc()%></P>
+                    <% }
+                        }
+                    } else if (pro.getProductFiletype().equalsIgnoreCase("video")) {%>
 
                 <%
 
@@ -365,18 +370,25 @@
                 <P><%=pro.getProductDesc()%></P>
                     <% }
                         }
-                    } else {%>
+                    } else{%>
                     <%if (subst) {%>
                 <object style="padding-bottom: 10px;"  class="center-block" width="600" height="500" data=<%=pro.getProductFile()%>>
                     <a href="<%=pro.getProductFile()%>"><button class="btn btn-sm">download</button></a>
-                    <br/>
-                    <br/>
-                    <%}%>
-                    <h3 class="brick-color"> <%=pro.getProductName()%></h3>
-                    <%if (pro.getProductDesc() != null) {%>
-                    <P><%=pro.getProductDesc()%></P>
                 </object>
+                <br/>
+                <br/>
+                <h3 class="brick-color"> <%=pro.getProductName()%></h3>
+                <%if (pro.getProductDesc() != null) {%>
+                <P><%=pro.getProductDesc()%></P>
+
                 <%}
+                } else {%>
+                <img class="img-responsive post-img center-block" width="600" height="500" src="resourcefront/img/dicon.png" alt=""/>
+                <h3 class="brick-color"> <%=pro.getProductName()%></h3>
+                <%if (pro.getProductDesc() != null) {%>
+                <P><%=pro.getProductDesc()%></P>
+                    <% }
+                        }
                     }%>
             </div>
             <hr>
