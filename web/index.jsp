@@ -181,7 +181,7 @@
 
     <% } else if (gatewayIP != null && gatewayIP.getOpid() == 9) {
         //http://ohboye.in/mg-amaya/cnt/cmp?token=abcd114343&cmpid=2137&adid=1
-    %>
+%>
     <center>
         <div class="checksubscribe"><a href="http://silk69.in/silk/cnt/bsnleastcmp?cmpid=162&adid=1&token=<%=randNum5%>&pubid=1">
                 Subscribe @35.0 for 10 Days
@@ -204,7 +204,7 @@
 
     <% } else if (gatewayIP != null && gatewayIP.getOpid() == 11) {
         //http://ohboye.in/mg-amaya/cnt/cmp?token=abcd114343&cmpid=2137&adid=1
-    %>
+%>
     <center>
         <div class="checksubscribe"><a href="http://silk69.in/silk/cnt/bsnlnorthcmp?cmpid=161&adid=1&token=<%=randNum5%>&pubid=1">
                 Subscribe @35.0 for 10 Days
@@ -245,43 +245,18 @@
                 %>
                 <div class="col-sm-4 text-center pa-b">
                     <div class="col-sm-12 col-xs-12">
-                        <%if (pro.getProductFiletype().equalsIgnoreCase("images")) {%>
-                        <div align="center" style="width: auto; height: auto; padding-bottom: 10px;">
-                            <a href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">
-                                <img class="img-responsive post-img" src=<%=pro.getProductFile()%> alt=""/>
-                                <%if(pro.getProductName().length()< 24){%>
-                                <h4 class="brick-color"> <%=pro.getProductName()%></h4>
-                                <%}else{%>
-                                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 24)+"..."%></h4>
-                                
-                                <%}%>
-                            </a>
-                        </div>
-                        <%} else if (pro.getProductFiletype().equalsIgnoreCase("video")) {%>
-                        <div align="center" style=" width: auto; height: auto; padding-bottom: 10px;">
-                            <a href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">
-                                <img class="img-responsive post-img" src=<%=pro.getProductThumb()%> alt=""/>
-                                <%if(pro.getProductName().length()< 24){%>
-                                <h4 class="brick-color"> <%=pro.getProductName()%></h4>
-                                <%}else{%>
-                                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 24)+"..."%></h4>
-                                
-                                <%}%>
-                            </a>
-                        </div>
-                        <%} else {%>
+                       
                         <div align="center" style=" width: auto; height: auto; padding-bottom: 10px;">
                             <a class=""  href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">
-                                <img class="img-responsive post-img" src="resourcefront/img/dicon.png" alt=""/>
-                                <%if(pro.getProductName().length()< 24){%>
+                                <img class="img-responsive post-img" src=<%=pro.getProductThumb()%> alt=""/>
+                                <%if (pro.getProductName().length() < 24) {%>
                                 <h4 class="brick-color"> <%=pro.getProductName()%></h4>
-                                <%}else{%>
-                                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 24)+"..."%></h4>
-                                
+                                <%} else {%>
+                                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 24) + "..."%></h4>
+
                                 <%}%>
                             </a>
                         </div>
-                        <%}%>
                         <div class="btn-sm">
                             <a class="top-read-more" href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">Details</a>
                         </div>
@@ -321,43 +296,17 @@
                 %>
                 <div class="col-sm-4 text-center">
                     <div class="col-sm-12 col-xs-12">
-                        <%if (pro.getProductFiletype().equalsIgnoreCase("images")) {%>
-                        <div align="center" style="width: auto; height: auto; padding-bottom: 10px;">
-                            <a href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">
-                                <img class="img-responsive post-img" src=<%=pro.getProductFile()%> alt=""/>
-                                <%if(pro.getProductName().length()< 24){%>
-                                <h4 class="brick-color"> <%=pro.getProductName()%></h4>
-                                <%}else{%>
-                                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 24)+"..."%></h4>
-                                
-                                <%}%>
-                            </a>
-                        </div>
-                        <%} else if (pro.getProductFiletype().equalsIgnoreCase("video")) {%>
-                        <div align="center" style=" width: auto; height: auto; padding-bottom: 10px;">
-                            <a href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">
-                                <img class="img-responsive post-img" src=<%=pro.getProductThumb()%> alt=""/>
-                               <%if(pro.getProductName().length()< 24){%>
-                                <h4 class="brick-color"> <%=pro.getProductName()%></h4>
-                                <%}else{%>
-                                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 24)+"..."%></h4>
-                                
-                                <%}%>
-                            </a>
-                        </div>
-                        <%} else {%>
+                        
                         <div align="center" style=" width: auto; height: auto; padding-bottom: 10px;">
                             <a class=""  href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">
-                                <img class="img-responsive post-img" src="resourcefront/img/dicon.png" alt=""/>
-                                <%if(pro.getProductName().length()< 24){%>
+                                <img class="img-responsive post-img" src=<%=pro.getProductThumb()%> alt=""/>
+                                <%if (pro.getProductName().length() < 24) {%>
                                 <h4 class="brick-color"> <%=pro.getProductName()%></h4>
-                                <%}else{%>
-                                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 24)+"..."%></h4>
-                                
+                                <%} else {%>
+                                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 24) + "..."%></h4>
                                 <%}%>
                             </a>
                         </div>
-                        <%}%>
                         <div class="btn-sm">
                             <a class="top-read-more" href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">Details</a>
                         </div>
@@ -381,7 +330,7 @@
     %>
 
     <br/>
-   
+
 </body>
 </html>
 

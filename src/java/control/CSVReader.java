@@ -29,7 +29,18 @@ public class CSVReader {
                     String[] data = line.split(cvsSplitBy);
                     Product prod = new Product();
                     prod.setCategoryId(cid);
-                    prod.setProductDesc(data[1]);
+                    if(data[1]==null)
+                    {
+                        prod.setProductDesc("");
+                    }
+                    else if(data[1].equalsIgnoreCase("NULL"))
+                    {
+                    prod.setProductDesc("");
+                    }
+                    else
+                    {
+                        prod.setProductDesc(data[1]);
+                    }
                     prod.setProductFile(data[2]);
                     prod.setProductFiletype(data[3]);
                     prod.setProductName(data[0]);

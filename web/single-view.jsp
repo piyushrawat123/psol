@@ -180,7 +180,7 @@
 
                 <% } else if (gatewayIP != null && gatewayIP.getOpid() == 9) {
                     //http://ohboye.in/mg-amaya/cnt/cmp?token=abcd114343&cmpid=2137&adid=1
-                %>
+%>
                 <center>
                     <div class="checksubscribe"><a href="http://silk69.in/silk/cnt/bsnleastcmp?cmpid=162&adid=1&token=<%=randNum5%>&pubid=1">
                             Subscribe @35.0 for 10 Days
@@ -203,7 +203,7 @@
 
                 <% } else if (gatewayIP != null && gatewayIP.getOpid() == 11) {
                     //http://ohboye.in/mg-amaya/cnt/cmp?token=abcd114343&cmpid=2137&adid=1
-                %>
+%>
                 <center>
                     <div class="checksubscribe"><a href="http://silk69.in/silk/cnt/bsnlnorthcmp?cmpid=161&adid=1&token=<%=randNum5%>&pubid=1">
                             Subscribe @35.0 for 10 Days
@@ -225,7 +225,7 @@
                 <P><%=pro.getProductDesc()%></P>
                     <%}
                     } else {%>
-                <img class="img-responsive post-img center-block" width="400" height="320" src=<%=pro.getProductFile()%> alt=""/>
+                <img class="img-responsive post-img center-block" width="320" height="240" src=<%=pro.getProductThumb()%> alt=""/>
                 <h3 class="brick-color"> <%=pro.getProductName()%></h3>
                 <%if (pro.getProductDesc() != null) {%>
                 <P><%=pro.getProductDesc()%></P>
@@ -319,7 +319,7 @@
 
                 <% } else if (gatewayIP != null && gatewayIP.getOpid() == 9) {
                     //http://ohboye.in/mg-amaya/cnt/cmp?token=abcd114343&cmpid=2137&adid=1
-                %>
+%>
                 <center>
                     <div class="checksubscribe"><a href="http://silk69.in/silk/cnt/bsnleastcmp?cmpid=162&adid=1&token=<%=randNum5%>&pubid=1">
                             Subscribe @35.0 for 10 Days
@@ -342,7 +342,7 @@
 
                 <% } else if (gatewayIP != null && gatewayIP.getOpid() == 11) {
                     //http://ohboye.in/mg-amaya/cnt/cmp?token=abcd114343&cmpid=2137&adid=1
-                %>
+%>
                 <center>
                     <div class="checksubscribe"><a href="http://silk69.in/silk/cnt/bsnlnorthcmp?cmpid=161&adid=1&token=<%=randNum5%>&pubid=1">
                             Subscribe @35.0 for 10 Days
@@ -364,7 +364,7 @@
                 <P><%=pro.getProductDesc()%></P>
                     <%}
                     } else {%>
-                <img class="img-responsive post-img" width="600" height="500" style="margin-left: 350px;" src=<%=pro.getProductThumb()%> alt=""/>
+                <img class="img-responsive post-img" width="320" height="240" style="margin-left: 500px;" src=<%=pro.getProductThumb()%> alt=""/>
                 <h3 class="brick-color"> <%=pro.getProductName()%></h3>
                 <%if (pro.getProductDesc() != null) {%>
                 <P><%=pro.getProductDesc()%></P>
@@ -372,9 +372,8 @@
                         }
                     } else{%>
                     <%if (subst) {%>
-                <object style="padding-bottom: 10px;"  class="center-block" width="600" height="500" data=<%=pro.getProductFile()%>>
-                    <a href="<%=pro.getProductFile()%>"><button class="btn btn-sm">download</button></a>
-                </object>
+                <img class="img-responsive post-img center-block" width="600" height="500" src="<%=pro.getProductThumb()%>" alt=""/>
+                <a href="<%=pro.getProductFile()%>"><button class="btn btn-sm">download</button></a>
                 <br/>
                 <br/>
                 <h3 class="brick-color"> <%=pro.getProductName()%></h3>
@@ -383,7 +382,7 @@
 
                 <%}
                 } else {%>
-                <img class="img-responsive post-img center-block" width="600" height="500" src="resourcefront/img/dicon.png" alt=""/>
+                <img class="img-responsive post-img center-block" width="320" height="240" src="<%=pro.getProductThumb()%>" alt=""/>
                 <h3 class="brick-color"> <%=pro.getProductName()%></h3>
                 <%if (pro.getProductDesc() != null) {%>
                 <P><%=pro.getProductDesc()%></P>
@@ -424,21 +423,8 @@
                             %>
                             <div class="col-sm-2 text-center">
                                 <div class="col-sm-12 col-xs-12">
-                                    <%if (prod.getProductFiletype().equalsIgnoreCase("images")) {%>
                                     <div style="width: auto; height: auto; padding-bottom: 10px;">
-                                        <a href="single-view.jsp?cid=<%=prod.getCategoryId()%>&pid=<%=prod.getProductId()%>" style="text-decoration: none;">
-                                            <img class="img-responsive post-img" src=<%=prod.getProductFile()%> alt=""/>
-                                            <%if (prod.getProductName().length() < 15) {%>
-                                            <h5> <%=prod.getProductName()%></h5>
-                                            <%} else {%>
-                                            <h5> <%=prod.getProductName().substring(0, 15) + "..."%></h5>
-                                            <%}%>
-
-                                        </a>
-                                    </div>
-                                    <%} else if (prod.getProductFiletype().equalsIgnoreCase("video")) {%>
-                                    <div style="width: auto; height: auto; padding-bottom: 10px;">
-                                        <a href="single-view.jsp?cid=<%=prod.getCategoryId()%>&pid=<%=prod.getProductId()%>" style="text-decoration: none;">
+                                        <a class=""  href="single-view.jsp?cid=<%=prod.getCategoryId()%>&pid=<%=prod.getProductId()%>" style="text-decoration: none;">
                                             <img class="img-responsive post-img" src=<%=prod.getProductThumb()%> alt=""/>
                                             <%if (prod.getProductName().length() < 15) {%>
                                             <h5> <%=prod.getProductName()%></h5>
@@ -447,19 +433,6 @@
                                             <%}%>
                                         </a>
                                     </div>
-                                    <%} else {%>
-                                    <div style="width: auto; height: auto; padding-bottom: 10px;">
-                                        <a class=""  href="single-view.jsp?cid=<%=prod.getCategoryId()%>&pid=<%=prod.getProductId()%>" style="text-decoration: none;">
-                                            <img class="img-responsive post-img" src="resourcefront/img/dicon.png" alt=""/>
-                                            <%if (prod.getProductName().length() < 15) {%>
-                                            <h5> <%=prod.getProductName()%></h5>
-                                            <%} else {%>
-                                            <h5> <%=prod.getProductName().substring(0, 15) + "..."%></h5>
-                                            <%}%>
-                                        </a>
-                                    </div>
-                                    <%}%>
-
                                     <br/>
                                 </div>
                             </div>

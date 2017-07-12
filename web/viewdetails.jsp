@@ -107,36 +107,10 @@
                             i++;
                     %>
                     <div class="col-md-2 text-center">
-                        <div class="col-sm-12 col-xs-12">
-                            <%if (pro.getProductFiletype().equalsIgnoreCase("images")) {%>
-                            <div style="width: auto; height: auto; padding-bottom: 10px;">
-                                <a href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">
-                                    <img class="img-responsive post-img" src=<%=pro.getProductFile()%> alt=""/>
-                                    <%if (pro.getProductName().length() < 15) {%>
-                                    <h5> <%=pro.getProductName()%></h5>
-                                    <%} else {%>
-                                    <h5> <%=pro.getProductName().substring(0, 15) + "..."%></h5>
-
-                                    <%}%>
-                                </a>
-
-                            </div>
-                            <%} else if (pro.getProductFiletype().equalsIgnoreCase("video")) {%>
-                            <div id="<%=pro.getProductId()%>" style=" width: auto; height: auto; padding-bottom: 10px;">
-                                 <a href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">
-                                    <img class="img-responsive post-img" src=<%=pro.getProductThumb()%> alt=""/>
-
-                                    <%if (pro.getProductName().length() < 15) {%>
-                                    <h5> <%=pro.getProductName()%></h5>
-                                    <%} else {%>
-                                    <h5><%=pro.getProductName().substring(0, 15) + "..."%></h5>
-                                    <%}%>
-                                </a>
-                            </div>
-                            <%} else {%>
+                        <div class="col-sm-12 col-xs-12">                            
                             <div style=" width: auto; height: auto; padding-bottom: 10px;">
                                 <a class=""  href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">
-                                    <img class="img-responsive post-img" src="resourcefront/img/dicon.png" alt=""/>
+                                    <img class="img-responsive post-img" src=<%=pro.getProductThumb()%> alt=""/>
                                     <%if (pro.getProductName().length() < 15) {%>
                                     <h5> <%=pro.getProductName()%></h5>
                                     <%} else {%>
@@ -144,7 +118,6 @@
                                     <%}%>
                                 </a>
                             </div>
-                            <%}%>
                             <div class="btn-sm">
                                 <a class="top-read-more" href="single-view.jsp?cid=<%=pro.getCategoryId()%>&pid=<%=pro.getProductId()%>">Details</a>
                             </div>
