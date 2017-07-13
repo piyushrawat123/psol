@@ -84,7 +84,7 @@
                 <div class="row">
                     <div class="col-md-12 ">
                         <div class="">
-                            <h2 class="page-title" style="color: white; font-family: initial;"><a style="color: white;" href="index.jsp">HOME</a>&nbsp;>&nbsp;<a style="color: white;" href="viewdetails.jsp?cid=<%=clist.getCategoryId()%>"><%=clist.getCategoryName().trim()%></a></h2>
+                            <h4 class="page-title" style="color: white; font-family: initial;"><a style="color: white;" href="index.jsp">HOME</a>&nbsp;>&nbsp;<a style="color: white;" href="viewdetails.jsp?cid=<%=clist.getCategoryId()%>"><%=clist.getCategoryName().trim()%></a></h4>
                         </div>
                     </div>
                 </div>

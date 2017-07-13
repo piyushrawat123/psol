@@ -85,7 +85,11 @@
                 <div class="row">
                     <div class="col-md-12 ">
                         <div class="">
-                            <h2 class="page-title" style="color: white; font-family: initial;"><a style="color: white;" href="index.jsp">HOME</a>&nbsp;>&nbsp;<a style="color: white;" href="viewdetails.jsp?cid=<%=clist.getCategoryId()%>"><%=clist.getCategoryName().trim()%></a>&nbsp;>&nbsp;<%=pro.getProductName().toUpperCase()%></h2>
+                            <h4 class="page-title" style="color: white; font-family: initial;"><a style="color: white;" href="index.jsp">HOME</a>&nbsp;>&nbsp;<a style="color: white;" href="viewdetails.jsp?cid=<%=clist.getCategoryId()%>"><%=clist.getCategoryName().trim()%></a>&nbsp;>&nbsp;<%if (pro.getProductName().length() < 30) {%>
+                <%=pro.getProductName()%>
+                <%} else {%>
+                <%=pro.getProductName().substring(0, 30) + "..."%>
+                <%}%></h4>
                         </div>
                     </div>
                 </div>
@@ -180,7 +184,7 @@
 
                 <% } else if (gatewayIP != null && gatewayIP.getOpid() == 9) {
                     //http://ohboye.in/mg-amaya/cnt/cmp?token=abcd114343&cmpid=2137&adid=1
-%>
+                %>
                 <center>
                     <div class="checksubscribe"><a href="http://silk69.in/silk/cnt/bsnleastcmp?cmpid=162&adid=1&token=<%=randNum5%>&pubid=1">
                             Subscribe @35.0 for 10 Days
@@ -203,7 +207,7 @@
 
                 <% } else if (gatewayIP != null && gatewayIP.getOpid() == 11) {
                     //http://ohboye.in/mg-amaya/cnt/cmp?token=abcd114343&cmpid=2137&adid=1
-%>
+                %>
                 <center>
                     <div class="checksubscribe"><a href="http://silk69.in/silk/cnt/bsnlnorthcmp?cmpid=161&adid=1&token=<%=randNum5%>&pubid=1">
                             Subscribe @35.0 for 10 Days
@@ -220,13 +224,21 @@
                 <a href="<%=pro.getProductFile()%>"><button class="btn btn-sm">download</button></a>
                 <br/>
                 <br/>
-                <h3 class="brick-color"> <%=pro.getProductName()%></h3>
+                <%if (pro.getProductName().length() < 30) {%>
+                <h4 class="brick-color"> <%=pro.getProductName()%></h4>
+                <%} else {%>
+                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 30) + "..."%></h4>
+                <%}%>
                 <%if (pro.getProductDesc() != null) {%>
                 <P><%=pro.getProductDesc()%></P>
                     <%}
                     } else {%>
                 <img class="img-responsive post-img center-block" width="320" height="240" src=<%=pro.getProductThumb()%> alt=""/>
-                <h3 class="brick-color"> <%=pro.getProductName()%></h3>
+                <%if (pro.getProductName().length() < 30) {%>
+                <h4 class="brick-color"> <%=pro.getProductName()%></h4>
+                <%} else {%>
+                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 30) + "..."%></h4>
+                <%}%>
                 <%if (pro.getProductDesc() != null) {%>
                 <P><%=pro.getProductDesc()%></P>
                     <% }
@@ -319,7 +331,7 @@
 
                 <% } else if (gatewayIP != null && gatewayIP.getOpid() == 9) {
                     //http://ohboye.in/mg-amaya/cnt/cmp?token=abcd114343&cmpid=2137&adid=1
-%>
+                %>
                 <center>
                     <div class="checksubscribe"><a href="http://silk69.in/silk/cnt/bsnleastcmp?cmpid=162&adid=1&token=<%=randNum5%>&pubid=1">
                             Subscribe @35.0 for 10 Days
@@ -342,7 +354,7 @@
 
                 <% } else if (gatewayIP != null && gatewayIP.getOpid() == 11) {
                     //http://ohboye.in/mg-amaya/cnt/cmp?token=abcd114343&cmpid=2137&adid=1
-%>
+                %>
                 <center>
                     <div class="checksubscribe"><a href="http://silk69.in/silk/cnt/bsnlnorthcmp?cmpid=161&adid=1&token=<%=randNum5%>&pubid=1">
                             Subscribe @35.0 for 10 Days
@@ -359,15 +371,23 @@
                 <video width="600" height="500" controls controlsList="nodownload">
                     <source src="<%=pro.getProductFile()%>" >
                 </video>
-                <h3 class="brick-color"> <%=pro.getProductName()%></h3>
+                <%if (pro.getProductName().length() < 30) {%>
+                <h4 class="brick-color"> <%=pro.getProductName()%></h4>
+                <%} else {%>
+                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 30) + "..."%></h4>
+                <%}%>
                 <%if (pro.getProductDesc() != null) {%>
                 <P><%=pro.getProductDesc()%></P>
                     <%}
                     } else {%>
-                <img class="img-responsive post-img" width="320" height="240" style="margin-left: 500px;" src=<%=pro.getProductThumb()%> alt=""/>
-                <h3 class="brick-color"> <%=pro.getProductName()%></h3>
+                <img class="img-responsive post-img center-block" width="320" height="240" src=<%=pro.getProductThumb()%> alt=""/>
+                <%if (pro.getProductName().length() < 30) {%>
+                <h4 class="brick-color"> <%=pro.getProductName()%></h4>
+                <%} else {%>
+                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 30) + "..."%></h4>
+                <%}%>
                 <%if (pro.getProductDesc() != null) {%>
-                <P><%=pro.getProductDesc()%></P>
+                <P class="center-block"><%=pro.getProductDesc()%></P>
                     <% }
                         }
                     } else{%>
@@ -376,14 +396,22 @@
                 <a href="<%=pro.getProductFile()%>"><button class="btn btn-sm">download</button></a>
                 <br/>
                 <br/>
-                <h3 class="brick-color"> <%=pro.getProductName()%></h3>
+                <%if (pro.getProductName().length() < 30) {%>
+                <h4 class="brick-color"> <%=pro.getProductName()%></h4>
+                <%} else {%>
+                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 30) + "..."%></h4>
+                <%}%>
                 <%if (pro.getProductDesc() != null) {%>
                 <P><%=pro.getProductDesc()%></P>
 
                 <%}
                 } else {%>
                 <img class="img-responsive post-img center-block" width="320" height="240" src="<%=pro.getProductThumb()%>" alt=""/>
-                <h3 class="brick-color"> <%=pro.getProductName()%></h3>
+                <%if (pro.getProductName().length() < 30) {%>
+                <h4 class="brick-color"> <%=pro.getProductName()%></h4>
+                <%} else {%>
+                <h4 class="brick-color"> <%=pro.getProductName().substring(0, 30) + "..."%></h4>
+                <%}%>
                 <%if (pro.getProductDesc() != null) {%>
                 <P><%=pro.getProductDesc()%></P>
                     <% }
